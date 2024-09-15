@@ -71,6 +71,16 @@ theme_raincloud()
 
 ![](man/figures/README-boxjitter-1.png)<!-- -->
 
+Use `raincloud_barcode()` to display barcode lines instead of jittered
+points.
+
+``` r
+raincloud_barcode(iris, ggplot2::aes(Species, Sepal.Width), barcode_size = 10) +
+  theme_raincloud()
+```
+
+![](man/figures/README-barcode-1.png)<!-- -->
+
 ## Acknowledgments
 
 The `ggraincloud` package was inspired by the work of [Cédric

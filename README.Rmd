@@ -68,6 +68,13 @@ raincloud_boxjitter(
 theme_raincloud()
 ```
 
+Use `raincloud_barcode()` to display barcode lines instead of jittered points.
+
+```{r barcode, fig.height=8, fig.width=6}
+raincloud_barcode(iris, ggplot2::aes(Species, Sepal.Width), barcode_size = 10) +
+  theme_raincloud()
+```
+
 ## Acknowledgments
 
 The `ggraincloud` package was inspired by the work of [Cédric Scherer](https://www.cedricscherer.com/). His shared code snippets and creative variations of raincloud plots in R sparked the idea to develop this package, making it easier to quickly create raincloud plots using ggplot2. A huge thanks to Cédric for his invaluable contributions to the R and data visualization community!
