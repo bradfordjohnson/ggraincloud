@@ -13,7 +13,7 @@
 #'
 #' @examples
 #' # Example usage of the function
-#' plot <- raincloud(iris, aes(Species, Sepal.Width, color = Species))
+#' plot <- raincloud(iris, ggplot2::aes(Species, Sepal.Width))
 #'
 #' @import ggplot2
 #' @import ggforce
