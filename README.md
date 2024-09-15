@@ -4,9 +4,16 @@
 # ggraincloud
 
 <!-- badges: start -->
+
+[![R-CMD-check](https://github.com/bradfordjohnson/ggraincloud/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/bradfordjohnson/ggraincloud/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-The goal of ggraincloud is to …
+**ggraincloud** is an R package that provides templated raincloud plots
+using the grammar of graphics with `ggplot2`. It streamlines the
+creation of visually appealing raincloud plots, combining density plots,
+boxplots, and scatter plots for enhanced data visualization. Perfect for
+users looking to create consistent and customizable raincloud plots
+efficiently.
 
 ## Installation
 
