@@ -26,13 +26,14 @@ raincloud <- function(data, mapping, flip_coords = FALSE, ...) {
   plot <- ggplot2::ggplot(data, mapping) +
     ggdist::stat_halfeye(
       adjust = .5,
-      width = .7,
+      width = .3,
       .width = 0,
-      justification = -.2,
-      point_colour = NA
+      justification = -.3,
+      point_colour = NA,
+      ...
     ) +
-    ggplot2::geom_boxplot(width = .2, outlier.shape = NA) +
-    ggplot2::geom_jitter(width = .05, alpha = .3)
+    ggplot2::geom_boxplot(width = .1, outlier.shape = NA, ...) +
+    gghalves::geom_half_point(side = "l", range_scale = .4, ...)
 
   if (flip_coords) {
     plot <- plot + ggplot2::coord_flip(xlim = c(1, NA), clip = "off")
