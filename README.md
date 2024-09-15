@@ -25,14 +25,23 @@ Create a raincloud plot using `raincloud()`.
 ``` r
 library(ggraincloud)
 
-raincloud(iris, ggplot2::aes(Species, Sepal.Width, color = Species, fill=Species), alpha = .5, flip_coords = TRUE)
+raincloud(iris, ggplot2::aes(Species, Sepal.Width), flip_coords = TRUE)
 ```
 
 <img src="man/figures/README-example-1.png" width="100%" />
 
 ``` r
 
-raincloud(iris, ggplot2::aes(Species, Sepal.Width, color = Species, fill=Species), alpha = .5, flip_coords = FALSE)
+raincloud(iris,
+          ggplot2::aes(
+            Species,
+            Sepal.Width,
+            color = Species,
+            fill=Species
+          ),
+          alpha = .5,
+          flip_coords = FALSE
+        )
 ```
 
 <img src="man/figures/README-example-2.png" width="100%" />
