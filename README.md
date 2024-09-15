@@ -25,10 +25,11 @@ Create a raincloud plot using `raincloud()`.
 ``` r
 library(ggraincloud)
 
-raincloud(iris, ggplot2::aes(Species, Sepal.Width), flip_coords = TRUE)
+raincloud(iris, ggplot2::aes(Species, Sepal.Width), flip_coords = TRUE) +
+  ggplot2::theme_minimal()
 ```
 
-<img src="man/figures/README-example-1.png" width="100%" />
+![](man/figures/README-example-1.png)<!-- -->
 
 ``` r
 
@@ -42,7 +43,8 @@ raincloud(
   ),
   alpha = .5,
   flip_coords = FALSE
-)
+) +
+ggplot2::theme_minimal()
 ```
 
-<img src="man/figures/README-example-2.png" width="100%" />
+![](man/figures/README-example-2.png)<!-- -->
