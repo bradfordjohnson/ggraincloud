@@ -32,16 +32,17 @@ raincloud(iris, ggplot2::aes(Species, Sepal.Width), flip_coords = TRUE)
 
 ``` r
 
-raincloud(iris,
-          ggplot2::aes(
-            Species,
-            Sepal.Width,
-            color = Species,
-            fill=Species
-          ),
-          alpha = .5,
-          flip_coords = FALSE
-        )
+raincloud(
+  iris,
+  ggplot2::aes(
+    Species,
+    Sepal.Width,
+    color = Species,
+    fill = Species
+  ),
+  alpha = .5,
+  flip_coords = FALSE
+)
 ```
 
 <img src="man/figures/README-example-2.png" width="100%" />
