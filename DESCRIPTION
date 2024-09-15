@@ -1,9 +1,16 @@
 Package: ggraincloud
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
+Title: Provides Raincloud Plot Templates In ggplot2.
+Version: 0.0.0.9001
 Authors@R: 
     person("Bradford", "Johnson", , "bradfordljohnson21@gmail.com", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: The ggraincloud package offers a set of customizable templates for creating raincloud
+    plots using ggplot2, the popular grammar of graphics in R. Raincloud plots provide a
+    visually rich representation of distributions, combining elements of boxplots,
+    jittered data points, and density plots. This package streamlines the process
+    of generating raincloud plots, allowing for flexible aesthetic mapping and styling
+    options. Whether you're visualizing data distributions or exploring patterns,
+    ggraincloud makes it easy to create informative and publication-ready graphics
+    with minimal effort.
 License: GPL (>= 3)
 Encoding: UTF-8
 Imports:

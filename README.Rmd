@@ -31,17 +31,30 @@ You can install the development version of ggraincloud from [GitHub](https://git
 pak::pak("bradfordjohnson/ggraincloud")
 ```
 
-## Example
+## Examples
 
-Create a raincloud plot using `raincloud()`.
+Create a raincloud plot using `raincloud()` and optionally style it with `theme_raincloud()`.
 
 ```{r example, fig.height=8, fig.width=6}
 library(ggraincloud)
 
-raincloud(iris, ggplot2::aes(Species, Sepal.Width), flip_coords = TRUE) +
-  ggplot2::theme_minimal()
+plot <- raincloud(iris, ggplot2::aes(Species, Sepal.Width), flip_coords = TRUE) +
+  theme_raincloud(flip_coords = TRUE)
 
-raincloud(
+plot
+```
+
+Since the raincloud functions return a ggplot2 object, you can easily customize the plot by adding additional ggplot2 layers and functions.
+
+```{r theme_void, fig.height=8, fig.width=6}
+plot +
+  ggplot2::theme_void()
+```
+
+You can place the "rain" (jittered points) inside the boxplot using `raincloud_boxjitter()`.
+
+```{r boxjitter, fig.height=8, fig.width=6}
+raincloud_boxjitter(
   iris,
   ggplot2::aes(
     Species,
@@ -52,5 +65,16 @@ raincloud(
   alpha = .5,
   flip_coords = FALSE
 ) +
-ggplot2::theme_minimal()
+theme_raincloud()
 ```
+
+Use `raincloud_barcode()` to display barcode lines instead of jittered points.
+
+```{r barcode, fig.height=8, fig.width=6}
+raincloud_barcode(iris, ggplot2::aes(Species, Sepal.Width), barcode_size = 10) +
+  theme_raincloud()
+```
+
+## Acknowledgments
+
+The `ggraincloud` package was inspired by the work of [Cédric Scherer](https://www.cedricscherer.com/). His shared code snippets and creative variations of raincloud plots in R sparked the idea to develop this package, making it easier to quickly create raincloud plots using ggplot2. A huge thanks to Cédric for his invaluable contributions to the R and data visualization community!
