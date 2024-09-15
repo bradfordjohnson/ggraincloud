@@ -27,13 +27,14 @@ pak::pak("bradfordjohnson/ggraincloud")
 
 ## Example
 
-Create a raincloud plot using `raincloud()`.
+Create a raincloud plot using `raincloud()` and style it with
+`theme_raincloud()`.
 
 ``` r
 library(ggraincloud)
 
 raincloud(iris, ggplot2::aes(Species, Sepal.Width), flip_coords = TRUE) +
-  ggplot2::theme_minimal()
+  theme_raincloud(flip_coords = TRUE)
 ```
 
 ![](man/figures/README-example-1.png)<!-- -->
@@ -51,7 +52,16 @@ raincloud(
   alpha = .5,
   flip_coords = FALSE
 ) +
-ggplot2::theme_minimal()
+theme_raincloud()
 ```
 
 ![](man/figures/README-example-2.png)<!-- -->
+
+## Acknowledgments
+
+The `ggraincloud` package was inspired by the work of [Cédric
+Scherer](https://www.cedricscherer.com/). His shared code snippets and
+creative variations of raincloud plots in R sparked the idea to develop
+this package, making it easier to quickly create raincloud plots using
+ggplot2. A huge thanks to Cédric for his invaluable contributions to the
+R and data visualization community!
